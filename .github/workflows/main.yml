@@ -30,15 +30,12 @@ jobs:
         
       - name: Run data
         run: npm run data
-      
-      - name: Run build
-        run: npm run build
         
       - name: Commit data.json
         run: |
           git config --global user.name 'Github Actions'
           git config --global user.email 'mgrilec@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git commit -am "Data update"
+          git commit -am "Data update" || true
           git push
     
