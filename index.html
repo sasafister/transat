@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      html *
+      {
+        font-size: 1em !important;
+        color: #000 !important;
+        font-family: Arial !important;
+      }
+      .wrapper {
+        height: 50px;
+        width: 80%;
+        line-height: 50px;
+      }
+      .avatars {
+        margin-left: 60px;
+        display: flex;
+        align-content: 'center';
+      }
+      .avatar {
+        border-radius: 10px;
+        height: 50;
+        width: 50;
+      }
+      .sailors {
+        padding-left: 10px;
+      }
+      .avatar-wrapper {
+        justify-content: 'space-between';
+      }
+      .logo-wrapper {
+        background-color: rgb(255, 135, 0);
+        margin-bottom: 30px;
+        display: flex;
+      }
+      .logo {
+        height: 70px;
+        padding: 10px 50px 10px 50px;
+      }
+      .title {
+        color: #fff!important;
+        width: 100%;
+        font-size: 13px!important;
+        text-align: 'right';
+      }
+    </style>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="logo-wrapper">
+      <img class="logo" src="https://www.transatjacquesvabre.org/public/images/web1/logos/logo-tjv-white-2019-bfbfa0ad85.svg"/>
+      <div class="title">Data provided by official Transat Jacuques Vabre</div>
+    </div>
+
+    <section class="avatars">
+      <div class="avatar-wrapper">
+        <img class="avatar" src="https://transat-jacques-vabre.geovoile.com/2021/data/photos/sk721.jpg?v=1636122710" />
+        <img class="avatar" src="https://transat-jacques-vabre.geovoile.com/2021/data/photos/sk722.jpg?v=1636122710" />
+      </div>
+      <div class="sailors">Ivica Kostelic / Calliste Antoine</h1>
+    </section>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>
