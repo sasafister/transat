@@ -30,9 +30,6 @@ jobs:
         
       - name: Run data
         run: npm run data
-      
-      - name: Run build
-        run: npm run build
         
       - name: Commit data.json
         run: |
