@@ -4,6 +4,8 @@
   "description": "Script for parsing data",
   "main": "index.js",
   "scripts": {
+    "data": "node index.js",
+    "build": "npx browserify parse.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
