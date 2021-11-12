@@ -28,9 +28,7 @@ fs.readdirSync(dataFolder).forEach((file) => {
     workbook.Sheets[sheet_name_list[CLASS40]]
   );
 
-  const teamFiltered = fileContents.filter(
-    (item) => item.__EMPTY === "Croatia Full of Life"
-  );
+  const teamFiltered = fileContents.filter((item) => item.__EMPTY);
 
   const date = Object.values(fileContents[2])[0].split(" ")[13];
   const time = Object.values(fileContents[2])[0].split(" ")[14];
@@ -40,12 +38,10 @@ fs.readdirSync(dataFolder).forEach((file) => {
 
   days.push({
     date: date + " " + time,
-    teamData: {
-      position: position,
-      speed: speed,
-    },
+    teamData: teamFiltered,
   });
 });
 
 let data = JSON.stringify(days);
+console.log(data);
 fs.writeFileSync("./data.json", data);
