@@ -6,11 +6,10 @@ name: CI
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 * * * *'
-
+    - cron: "10 * * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,10 +26,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install dependencies
         run: npm install
-        
+
       - name: Run data
-        run: npm run data
-        
+        run: npm run build
+
       - name: Commit data.json
         run: |
           git config --global user.name 'Github Actions'
@@ -38,4 +37,3 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git commit -am "Data update" || true
           git push
-    

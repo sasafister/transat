@@ -46,10 +46,6 @@ fs.readdirSync(dataFolder).forEach((file) => {
     },
   });
 });
-// days.push({ sailors: sailors });
-// console.log(days.sailors);
 
 let data = JSON.stringify(days);
 fs.writeFileSync("./data.json", data);
-
-// console.log(days);
