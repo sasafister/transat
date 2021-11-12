@@ -43,5 +43,4 @@ fs.readdirSync(dataFolder).forEach((file) => {
 });
 
 let data = JSON.stringify(days);
-console.log(data);
 fs.writeFileSync("./data.json", data);
