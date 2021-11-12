@@ -9,7 +9,7 @@ on:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "0 * * * *"
+    - cron: "10 * * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -40,8 +40,8 @@ jobs:
 
       - name: Commit files # commit the output folder
         run: |
-          git config --local user.email "sashafishter@gmail.com"
-          git config --local user.name "Sasa Fister"
+          git config --global user.name 'Github Actions'
+          git config --global user.email 'sasafiste@users.noreply.github.com'
           git add ./data
           git commit -m "Add files"
           git push
