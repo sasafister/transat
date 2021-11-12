@@ -1,11 +1,11 @@
 {
   "name": "transat",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Script for parsing data",
   "main": "index.js",
   "scripts": {
     "data": "node index.js",
-    "build": "npx browserify parse.js -o bundle.js",
+    "build": "node scrapper.js && node index.js && npx browserify parse.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,8 +17,10 @@
   "author": "Sasa Fister",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.24.0",
     "chart.js": "^3.6.0",
-    "scraperjs": "^1.2.0",
+    "cheerio": "^1.0.0-rc.10",
+    "http": "^0.0.1-security",
     "xlsx": "^0.17.3"
   }
 }
