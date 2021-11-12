@@ -37,3 +37,19 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git commit -am "Data update" || true
           git push
+
+      - name: Commit xls files
+        run: |
+          git config --global user.name 'Sasa Fister'
+          git config --global user.email 'sasafister@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git commit -am "Data update" || true
+          git push
+
+      - name: Commit files # commit the output folder
+        run: |
+          git config --local user.email "sashafishter@gmail.com"
+          git config --local user.name "Sasa Fister"
+          git add ./data
+          git commit -m "Add files"
+          git push
