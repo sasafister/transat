@@ -20,7 +20,6 @@ const ULTIMES = 4;
 // console.log(Object.values(teamFiltered[0])[2]);
 
 let days = [];
-let sailors = "";
 fs.readdirSync(dataFolder).forEach((file) => {
   const workbook = XLSX.readFile(`${dataFolder}/${file}`);
   const sheet_name_list = workbook.SheetNames;
@@ -34,7 +33,6 @@ fs.readdirSync(dataFolder).forEach((file) => {
   const time = Object.values(fileContents[2])[0].split(" ")[14];
   const position = Object.values(teamFiltered[0])[0];
   const speed = Object.values(teamFiltered[0])[9];
-  //   sailors = Object.values(fileContents[2])[0];
 
   days.push({
     date: date + " " + time,
@@ -43,4 +41,5 @@ fs.readdirSync(dataFolder).forEach((file) => {
 });
 
 let data = JSON.stringify(days);
-fs.writeFileSync("./data.json", data);
+let parse = "export default " + data;
+fs.writeFileSync("./data.js", parse);
