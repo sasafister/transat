@@ -1,18 +1,21 @@
 import Chart from "./modules/chart.js";
 import Dataset, { labels } from "./modules/dataset.js";
+import SelectBoats from "./modules/selectBoats.js";
 
-const filters = ["Croatia Full of Life"];
+const filters = {
+  type: "position",
+  boats: [],
+};
 
-const dataset = Dataset("position", filters);
+const dataset = Dataset(filters);
 const chart = Chart(labels, dataset);
-import Select from "./modules/select.js";
 
-let select = document.getElementById("selector");
+let selectType = document.getElementById("selector");
 
-select.onchange = (e) => {
-  const dataset = Dataset(e.target.value, filters);
-  chart.data.datasets = dataset;
+selectType.onchange = (e) => {
+  filters.type = e.target.value;
+  chart.data.datasets = Dataset(filters);
   chart.update();
 };
 
-Select(chart);
+SelectBoats(chart, filters);

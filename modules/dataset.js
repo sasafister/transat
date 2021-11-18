@@ -5,8 +5,7 @@ const SKIPPERS = "__EMPTY_1";
 const SPEED = 9;
 const POSITION = 0;
 
-const randomColor = () =>
-  "#" + ("00000" + ((Math.random() * 16777216) << 0).toString(16)).substr(-6);
+const colors = ["red", "green", "blue", "purple", "yellow", "black", "cyan"];
 
 const getType = (type) => {
   switch (type) {
@@ -29,24 +28,24 @@ export const teams = (key) => {
   return teams;
 };
 
-export default (type, filters) => {
+export default (filters) => {
   let dataset = [];
-
-  filters.map((boat) => {
+  filters.boats.map((boat, index) => {
     const boatData = [];
     const dataArr = [];
     data.map((item) => {
-      const team = item.teamData.filter((item) => item[NAME] === boat);
+      const team = item.teamData.filter((item, i) => item[NAME] === boat);
       const values = Object.values(team[0]);
-      dataArr.push(values[getType(type)]);
+      dataArr.push(values[getType(filters.type)]);
     });
 
     boatData.push({
       label: boat,
       data: dataArr,
-      borderColor: randomColor,
+      borderColor: colors[index],
+      backgroundColor: colors[index],
       borderWidth: 2,
-      cubicInterpolationMode: "monotone",
+
       tension: 0.4,
     });
 

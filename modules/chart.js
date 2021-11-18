@@ -3,9 +3,21 @@ export default (labels, dataset) => {
 
   return new Chart(ctx, {
     type: "line",
-    responsive: true,
     options: {
-      pointRadius: 0,
+      responsive: true,
+      pointRadius: 2,
+      cubicInterpolationMode: "monotone",
+      scales: {
+        y: {
+          min: 0,
+          max: 45,
+        },
+      },
+      plugins: {
+        legend: {
+          position: "top",
+        },
+      },
     },
     data: {
       labels: labels,
