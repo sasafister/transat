@@ -14,8 +14,16 @@ export default (labels, dataset) => {
         },
       },
       plugins: {
-        legend: {
-          position: "top",
+        zoom: {
+          zoom: {
+            wheel: {
+              enabled: true,
+            },
+            pinch: {
+              enabled: true,
+            },
+            mode: "x",
+          },
         },
       },
     },

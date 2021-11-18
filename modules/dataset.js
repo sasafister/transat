@@ -44,9 +44,6 @@ export default (filters) => {
       data: dataArr,
       borderColor: colors[index],
       backgroundColor: colors[index],
-      borderWidth: 2,
-
-      tension: 0.4,
     });
 
     dataset.push(boatData[0]);
