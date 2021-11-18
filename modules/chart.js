@@ -13,19 +13,6 @@ export default (labels, dataset) => {
           max: 45,
         },
       },
-      plugins: {
-        zoom: {
-          zoom: {
-            wheel: {
-              enabled: true,
-            },
-            pinch: {
-              enabled: true,
-            },
-            mode: "x",
-          },
-        },
-      },
     },
     data: {
       labels: labels,
