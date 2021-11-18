@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "data": "node index.js",
-    "build": "node scrapper.js && node index.js && npx browserify parse.js -o bundle.js",
+    "build": "node ./services/scrapper.js && node ./services/file_parser.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "chart.js": "^3.6.0",
+    "chartjs-plugin-zoom": "^1.1.1",
     "cheerio": "^1.0.0-rc.10",
     "http": "^0.0.1-security",
     "xlsx": "^0.17.3"

@@ -48,7 +48,33 @@
         font-size: 13px!important;
         text-align: 'right';
       }
+      .chart {
+        display: flex;
+      }
+      .select-teams {
+        height: 100%;
+      }
+      .active {
+        background-color: rgb(255, 135, 0);
+      }
+
+    select option:hover,
+    select option:focus,
+    select option:active {
+        background: linear-gradient(#000000, #000000);
+        background-color: #000000 !important; /* for IE */
+        color: #ffed00 !important;
+    }
+
+    select option:checked {
+        background: rgb(255, 135, 0);
+        background-color: #d6d6d6 !important; /* for IE */
+        color: #000000 !important;
+    }
+
+   
     </style>
+
 </head>
 <body>
   <section class="wrapper">
@@ -56,18 +82,32 @@
       <img class="logo" src="https://www.transatjacquesvabre.org/public/images/web1/logos/logo-tjv-white-2019-bfbfa0ad85.svg"/>
       <div class="title">Data provided by official Transat Jacuques Vabre</div>
     </div>
-
+<!--     
     <section class="avatars">
       <div class="avatar-wrapper">
         <img class="avatar" src="https://transat-jacques-vabre.geovoile.com/2021/data/photos/sk721.jpg?v=1636122710" />
         <img class="avatar" src="https://transat-jacques-vabre.geovoile.com/2021/data/photos/sk722.jpg?v=1636122710" />
       </div>
       <div class="sailors">Ivica Kostelic / Calliste Antoine</h1>
-    </section>
-    <canvas id="myChart" width="400" height="200"></canvas>
+    </section> -->
+  
+      <section class="chart">
+        <section class="filters">
+          <select id="selector" >
+            <option >Choose</option>
+            <option value="speed">Speed</option>
+            <option value="position" selected>Position</option>
+          </select>
+    
+          <select id="team" multiple class="select-teams"></select>
+        </section>
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </section>
+
 
   </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="bundle.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
+
