@@ -94,6 +94,35 @@
       width: 100%;
       height: 100%;
     }
+    .last-position {
+      list-style: none;
+      padding: 0;
+    }
+    .boat-name {
+      height: 20px;
+      display: block;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+    .last-position-text {
+      height: 15px;
+      display: block;
+      font-size: 12px!important;
+    }
+    .avg-speed {
+      height: 15px;
+      display: block;
+      font-size: 12px!important;
+    }
+    .skippers {
+      height: 15px;
+      display: block;
+      font-size: 12px!important;
+    }
+    .bold {
+      font-weight: 700;
+      font-size: 15px;
+    }
   
    
     </style>
@@ -110,8 +139,10 @@
 
     <div class="content">
 
+      
       <!-- Left section -->
       <section class="left">
+          <ul id="last_position" class="last-position"></ul>
           <select id="selector" class="select-type">
             <option >Choose</option>
             <option value="speed">Speed</option>
@@ -139,22 +170,6 @@
       <div class="sailors">Ivica Kostelic / Calliste Antoine</h1>
     </section> -->
   
-      <!-- <section class="chart">
-        <section class="filters">
-          <select id="selector" >
-            <option >Choose</option>
-            <option value="speed">Speed</option>
-            <option value="position" selected>Position</option>
-          </select>
-    
-          <select id="team" multiple class="select-teams"></select>
-        </section>
-        <div class="chart-container">
-          <canvas id="myChart"></canvas>
-        </div>
-      </section> -->
-
-
   </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>

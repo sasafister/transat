@@ -16,9 +16,9 @@ fs.readdirSync(dataFolder).forEach((file) => {
   );
 
   const teamFiltered = fileContents.filter(
+    // Remove first row in Excel - It's just a labels
     (item) => item.__EMPTY != "Bateau" && item.__EMPTY
   );
-
   const date = Object.values(fileContents[2])[0].split(" ")[13];
   const time = Object.values(fileContents[2])[0].split(" ")[14];
   const position = Object.values(teamFiltered[0])[0];

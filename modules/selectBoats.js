@@ -1,4 +1,5 @@
 import Dataset, { teams } from "./dataset.js";
+import updatePosition from "../services/last_postition.js";
 
 const teamNames = teams(true);
 
@@ -16,7 +17,9 @@ export default (chart, filters) => {
       filters.boats.push(e.target.value);
       _toggleBackgroundColor("add", e.target.value);
     }
-    chart.data.datasets = Dataset(filters);
+    const dataset = Dataset(filters);
+    chart.data.datasets = dataset;
+    updatePosition(dataset);
     chart.update();
   };
 
