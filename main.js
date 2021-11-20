@@ -4,7 +4,7 @@ import SelectBoats from "./modules/selectBoats.js";
 
 const filters = {
   type: "position",
-  boats: [],
+  boats: ["Croatia Full of Life"],
 };
 
 const dataset = Dataset(filters);

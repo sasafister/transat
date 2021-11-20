@@ -13,6 +13,7 @@
         font-family: Arial !important;
       }
       .wrapper {
+        margin: 0 auto;
         height: 50px;
         width: 80%;
         line-height: 50px;
@@ -50,6 +51,8 @@
       }
       .chart {
         display: flex;
+        flex: 1;
+        background-color: red;
       }
       .select-teams {
         height: 100%;
@@ -71,7 +74,27 @@
         background-color: #d6d6d6 !important; /* for IE */
         color: #000000 !important;
     }
-
+    .chart-container {
+      width: 100%;
+    }
+    .content {
+      display: flex;
+    }
+    .left {
+      flex: 1;
+    }
+    .right {
+      flex: 3;
+    }
+    .select-type {
+      width: 100%;
+      height: 30px;
+    }
+    .select-teams {
+      width: 100%;
+      height: 100%;
+    }
+  
    
     </style>
 
@@ -79,9 +102,34 @@
 <body>
   <section class="wrapper">
     <div class="logo-wrapper">
-      <img class="logo" src="https://www.transatjacquesvabre.org/public/images/web1/logos/logo-tjv-white-2019-bfbfa0ad85.svg"/>
+      <a href="https://www.transatjacquesvabre.org" target="_blank">
+        <img class="logo" src="https://www.transatjacquesvabre.org/public/images/web1/logos/logo-tjv-white-2019-bfbfa0ad85.svg"/>
+      </a>
       <div class="title">Data provided by official Transat Jacuques Vabre</div>
     </div>
+
+    <div class="content">
+
+      <!-- Left section -->
+      <section class="left">
+          <select id="selector" class="select-type">
+            <option >Choose</option>
+            <option value="speed">Speed</option>
+            <option value="position" selected>Position</option>
+          </select>
+    
+          <select id="team" multiple class="select-teams"></select>
+      </section>
+      
+      <!-- Right section -->
+      <section class="right">
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </section>
+
+    </div>
+
 <!--     
     <section class="avatars">
       <div class="avatar-wrapper">
@@ -91,7 +139,7 @@
       <div class="sailors">Ivica Kostelic / Calliste Antoine</h1>
     </section> -->
   
-      <section class="chart">
+      <!-- <section class="chart">
         <section class="filters">
           <select id="selector" >
             <option >Choose</option>
@@ -101,12 +149,16 @@
     
           <select id="team" multiple class="select-teams"></select>
         </section>
-        <canvas id="myChart" width="400" height="200"></canvas>
-      </section>
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </section> -->
 
 
   </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="./assets/js/zoomPlugin.js"></script>
     <script src="main.js" type="module"></script>
 </body>
 </html>

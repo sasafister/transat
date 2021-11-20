@@ -5,12 +5,25 @@ export default (labels, dataset) => {
     type: "line",
     options: {
       responsive: true,
-      pointRadius: 2,
-      cubicInterpolationMode: "monotone",
+      spanGaps: true,
+      pointRadius: 3,
       scales: {
         y: {
           min: 0,
           max: 45,
+        },
+      },
+      plugins: {
+        zoom: {
+          zoom: {
+            wheel: {
+              enabled: true,
+            },
+            pinch: {
+              enabled: true,
+            },
+            mode: "x",
+          },
         },
       },
     },

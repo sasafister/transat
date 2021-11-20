@@ -27,4 +27,5 @@ export default (chart, filters) => {
       }
     }
   };
+  _toggleBackgroundColor("add", "Croatia Full of Life");
 };

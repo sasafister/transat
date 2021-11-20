@@ -44,6 +44,10 @@ export default (filters) => {
       data: dataArr,
       borderColor: colors[index],
       backgroundColor: colors[index],
+      fill: false,
+      borderWidth: 1,
+      pointStyle: "rectRot",
+      pointRadius: 3,
     });
 
     dataset.push(boatData[0]);
