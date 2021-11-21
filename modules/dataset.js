@@ -35,8 +35,10 @@ const _getSpeedAvarage = () => {
 
 export const teams = (key) => {
   const teams = [];
-  const teamArr = Object.values(data[0].teamData);
-  console.log(data);
+
+  // Select newest position boats from last .xls file
+  const parseDataInArr = Object.values(data);
+  const teamArr = parseDataInArr[parseDataInArr.length - 1].teamData;
   key
     ? teamArr.map((team) => teams.push(team[NAME]))
     : teamArr.map((team) => teams.push(team));

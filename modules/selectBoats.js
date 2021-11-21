@@ -6,7 +6,7 @@ const teamNames = teams(true);
 export default (chart, filters) => {
   var selectTeams = document.getElementById("team");
   teamNames.map((team, index) => {
-    selectTeams.options[index] = new Option(team, team);
+    selectTeams.options[index] = new Option(`#${index + 1} ${team}`, team);
   });
 
   selectTeams.onchange = (e) => {
