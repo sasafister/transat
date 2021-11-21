@@ -17,4 +17,4 @@ There are few very interesting features:
 
 Data is updated every hour and 10minutes. You can see the app here:
 
-```http://sasafister.github.io/transat/```
+http://sasafister.github.io/transat/
