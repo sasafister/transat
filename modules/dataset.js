@@ -36,6 +36,7 @@ const _getSpeedAvarage = () => {
 export const teams = (key) => {
   const teams = [];
   const teamArr = Object.values(data[0].teamData);
+  console.log(data);
   key
     ? teamArr.map((team) => teams.push(team[NAME]))
     : teamArr.map((team) => teams.push(team));
