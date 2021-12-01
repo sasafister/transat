@@ -1,5 +1,5 @@
 <a href="https://www.transatjacquesvabre.org">
-<img src="https://scontent-sof1-1.xx.fbcdn.net/v/t39.30808-6/250705538_4418979254837500_1412058108792125443_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFS_p4JVOqTo3IelYBiSC3puO2ji4HJHmS47aOLgckeZPUa4ZzmnP9bzrE4eFNttJg&_nc_ohc=yGiFbaZm3McAX_pCyyS&_nc_ht=scontent-sof1-1.xx&oh=d0fb3077a144fdff0c815dcf397bb85c&oe=619FBD55" width="100" height="100"></a>
+<img src="https://www.transatjacquesvabre.org/public/images/default/social-image-f5665deea7.png" height="100"></a>
 
 
 # Transat Jacques Vabre
